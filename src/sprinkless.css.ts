@@ -1,13 +1,9 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 
-const spacing = [0, 0.25, 0.5, 0.75, 1];
-
-type SpacingKeys = 0 | 1 | 2 | 3 | 4;
-
-const spacingObject = Object.fromEntries(
-  Object.entries(spacing).map((arr) => [arr[0], `${arr[1]}rem`])
-) as {
-  [key in SpacingKeys]: string;
+const spacingObject = {
+  0: "0rem",
+  1: "0.5rem",
+  2: "1rem",
 };
 
 const sprinklesProperties = defineProperties({
